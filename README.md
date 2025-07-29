@@ -1,6 +1,6 @@
 FORTRAN code for calculating synthetic seismograms based on a layered viscoelastic half-space earth model.
 
-Last update by Rongjiang Wang: Berlin, 28. July 2025
+Last update by Rongjiang Wang: Berlin, 29. July 2025
 
 Highlights:
 
