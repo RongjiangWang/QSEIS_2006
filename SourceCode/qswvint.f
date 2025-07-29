@@ -103,7 +103,8 @@ c
         enddo
         yabs=dsqrt(yabs)*k*dexp(-0.5d0*(k*rdisk(1))**2)
         ymax=dmax1(ymax,yabs)
-        if(yabs.gt.eps*ymax.and.yabs.gt.0.d0)then
+        if(yabs.gt.eps*ymax.and.yabs.gt.0.d0.and.
+     &     ik1.lt.nk0max)then
           ik1=ik1+1
           goto 101
         endif
@@ -128,7 +129,8 @@ c
         enddo
         yabs=dsqrt(yabs)*k*dexp(-0.5d0*(k*rdisk(1))**2)
         ymax=dmax1(ymax,yabs)
-        if(yabs.gt.eps*ymax.and.yabs.gt.0.d0)then
+        if(yabs.gt.eps*ymax.and.yabs.gt.0.d0.and.
+     &     ik2.lt.(nbsjmax+nk0max)/2)then
           ik2=ik2+1
           goto 102
         endif
