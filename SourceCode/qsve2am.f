@@ -1,4 +1,4 @@
-      subroutine qsve2am(n,ck,z,dynamic,y,c,nj,rsite)
+      subroutine qsve2am(n,ck,z,dyn,y,c,nj,rsite)
       implicit none
 c
 c     converting displacement-stress vectors to wave amplitudes
@@ -9,7 +9,7 @@ c
       real*8 z
       complex*16 ck
       complex*16 y(4,nj),c(4,nj)
-      logical*2 dynamic,rsite
+      logical*2 dyn,rsite
 c
       include 'qsglobal.h'
 c
@@ -32,7 +32,7 @@ c
           c(3,j)=-swap(3)+swap(4)
           c(4,j)= swap(3)+swap(4)
         enddo
-      else if(dynamic)then
+      else if(dyn)then
         ca=(0.5d0,0.d0)/acc(n)
         cadp=ca/kp(n)
         cads=ca/ks(n)
